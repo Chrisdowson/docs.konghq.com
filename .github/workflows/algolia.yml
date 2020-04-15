@@ -13,7 +13,7 @@ jobs:
       with:
         algolia_api_key: ${{ secrets.API_KEY }}
         algolia_application_id: ${{ secrets.ALGOLIA_APPLICATION_ID }}
-        file: "$GITHUB_WORKSPACE/algolia/config-ee.json"
+        file: "${{ github.workspace }}/algolia/config-ee.json"
   updateAlgoliaIndexKongStudio:
     name: Index Kong Studio Docs
     runs-on: ubuntu-latest
@@ -24,4 +24,4 @@ jobs:
       with:
         algolia_api_key: ${{ secrets.API_KEY }}
         algolia_application_id: ${{ secrets.ALGOLIA_APPLICATION_ID }}
-        file: "$GITHUB_WORKSPACE/algolia/config-studio.json"
+        file: "${{ github.workspace }}/algolia/config-studio.json"
